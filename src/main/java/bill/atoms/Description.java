@@ -1,6 +1,9 @@
 package bill.atoms;
 
-public class Description implements ControlledString,BillProperty {
+import bill.atoms.Interfaces.BillProperty;
+import bill.atoms.Interfaces.ControlledString;
+
+public class Description implements ControlledString, BillProperty {
     private final int MAX_LENGTH = 1024; //MAX title length
     private final String PROP_NAME = "Description";
 

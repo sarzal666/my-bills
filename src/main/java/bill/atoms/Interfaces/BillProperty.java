@@ -1,4 +1,4 @@
-package bill.atoms;
+package bill.atoms.Interfaces;
 
 public interface BillProperty {
 

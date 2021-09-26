@@ -1,6 +1,9 @@
 package bill.atoms;
 
-public final class Title implements ControlledString,BillProperty {
+import bill.atoms.Interfaces.BillProperty;
+import bill.atoms.Interfaces.ControlledString;
+
+public final class Title implements ControlledString, BillProperty {
     private final int MAX_LENGTH = 120; //MAX title length
     private final String PROP_NAME = "Title";
 
