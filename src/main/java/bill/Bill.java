@@ -1,12 +1,40 @@
 package bill;
 
+import bill.atoms.Title;
+
 import java.math.BigDecimal;
 
 public class Bill {
 
+    private Title title; // name of Bill
+    private String description;
+    private String category; // Bill Category => new class
+    private String tags; // Tags attached to Bill
+    private String priority; // Importance of Bill
+    
     private BigDecimal amount;
     private String currency;
 
+    
+    /* CONSTRUCTORS */
+    /**
+     * Bill Must contains title, amount and currency
+     * */
+
+    public Bill(String title, String description, String category, String tags, String priority, BigDecimal amount, String currency) throws Exception {
+        this.title = new Title(title);
+        this.description = description;
+        this.category = category;
+        this.tags = tags;
+        this.priority = priority;
+        this.amount = amount;
+        this.currency = currency;
+    }
+
+
+    
+    
+    
     public Bill(BigDecimal amount, String currency) {
         this.amount = amount;
         this.currency = currency;
@@ -28,4 +56,20 @@ public class Bill {
         this.currency = currency;
     }
 
+
+    public BigDecimal getAmount() {
+        return amount;
+    }
+
+    public void setAmount(BigDecimal amount) {
+        this.amount = amount;
+    }
+
+    public String getCurrency() {
+        return currency;
+    }
+
+    public void setCurrency(String currency) {
+        this.currency = currency;
+    }
 }
